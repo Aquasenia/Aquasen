@@ -120,7 +120,7 @@
     --color-notice: hsla(51, 100%, 80%, 1);
     --color-error-content: hsla(359, 50%, 50%, 1);
     --color-success-content: hsla(76, 29%, 28%, 1);
-    --color-info-content: hsla(205, 32%, 31%, 1);
+    --color-info-content: rgb(90, 160, 112);
     --color-notice-content: hsla(51, 30%, 30%, 1);
 
     /* shades 
@@ -435,6 +435,20 @@ button:-moz-focusring,
     outline: 1px dotted ButtonText;
 }
 
+::selection {
+    background: #93b78e;
+    color: #000000;
+}
+
+*::-moz-selection {
+    background: #93b78e;
+    color: #000000;
+}
+
+*::-webkit-selection {
+    background: #93b78e;
+    color: #000000;
+}
 fieldset {
     padding: 0.35em 0.75em 0.625em;
 }
