@@ -93,22 +93,20 @@
  * ------------------------------------------------------------------- */
 :root {
 
-    /* color-1(#608360)
-     * color-2(#3f613f)
-     */
     --color-1: #608360;
-    --color-2: #3f613f;
+    --color-2: #df6f5c;
 
     /* theme color variations
      */
-    --color-1-lighter: hsla(176, 93%, 44%, 1);
-    --color-1-light: hsla(176, 93%, 34%, 1);
-    --color-1-dark: hsla(176, 93%, 14%, 1);
-    --color-1-darker: hsla(176, 93%, 8%, 1);
-    --color-2-lighter: hsla(9, 68%, 78%, 1);
-    --color-2-light: hsla(9, 68%, 68%, 1);
-    --color-2-dark: hsla(9, 68%, 48%, 1);
-    --color-2-darker: hsla(9, 68%, 38%, 1);
+    --color-1-lighter: #90c490;
+    --color-1-light: #7eac7e;
+    --color-1-dark: #486548;
+    --color-1-darker: #384e38;
+    --color-1-dark-transparent: rgba(72, 101, 72, 0.163);
+    --color-2-lighter: #f4c7c0;
+    --color-2-light: #df6f5c;
+    --color-2-dark: #c95a4a;
+    --color-2-darker: #b34535;
 
     /* feedback colors
      * color-error(#ffd1d2), color-success(#c8e675), 
@@ -440,15 +438,16 @@ button:-moz-focusring,
     color: #000000;
 }
 
-*::-moz-selection {
+::-moz-selection {
     background: #93b78e;
     color: #000000;
 }
 
-*::-webkit-selection {
+::-webkit-selection {
     background: #93b78e;
     color: #000000;
 }
+
 fieldset {
     padding: 0.35em 0.75em 0.625em;
 }
@@ -1333,7 +1332,7 @@ a {
 a:focus,
 a:hover,
 a:active {
-    color: var(--color-2);
+    color: var(--color-1-dark);
 }
 
 a:hover,
@@ -1598,9 +1597,16 @@ dfn[title] {
 }
 
 mark {
-    background: linear-gradient(-100deg, hsla(122, 15%, 31%, 0.3), hsla(140, 17%, 51%, 0.7) 95%);
+    background: linear-gradient(-100deg, var(--color-1-dark-transparent), var(--color-1-light));
     border-radius: 1em 0;
     padding: .5rem;
+}
+
+.subtle-mark {
+    color: var(--color-1);
+    background: transparent;
+    border-radius: 0px;
+    padding: 0px;
 }
 
 /* horizontal rule
@@ -1712,6 +1718,16 @@ hr.fancy::before {
 
 .text-right {
     text-align: right;
+}
+
+.under-title {
+    font-family: var(--font-1);
+    font-weight: 400;
+    font-size: var(--text-sm);
+    line-height: var(--vspace-0_75);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: var(--color-text-light);
 }
 
 /* --------------------------------------------------------------------
